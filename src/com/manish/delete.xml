@@ -1,0 +1,235 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ns1="http://www.bounzd.com/index/soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns2="http://www.bounzd.com/index/wsdl"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+	SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+	<SOAP-ENV:Header>
+
+		<ns2:authenticate>
+
+			<xsd:string>WkGSbtqKJ9zF/pK02w6gpye7KHmRRroqd+ou6PYnzIc=</xsd:string>
+
+		</ns2:authenticate>
+
+	</SOAP-ENV:Header>
+
+	<SOAP-ENV:Body>
+
+		<ns1:getCallDetails>
+
+			<uniq_id xsi:type="xsd:string">1405594820.3589</uniq_id>
+
+		</ns1:getCallDetails>
+
+	</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+
+
+
+
+
+
+RESPONSE
+
+
+
+
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ns1="http://www.bounzd.com/index/soap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/xml-soap"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+	SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+	<SOAP-ENV:Body>
+
+		<ns1:getCallDetailsResponse>
+
+			<return xsi:type="ns2:Map">
+
+				<item>
+
+					<key xsi:type="xsd:string">WidgetName</key>
+
+					<value xsi:type="xsd:string">PGCall_Sales</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">Date</key>
+
+					<value xsi:type="xsd:string">2014-07-17 16:30:27</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">Callfrom</key>
+
+					<value xsi:type="xsd:string">Web</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">CallAttendedby</key>
+
+					<value xsi:type="xsd:string">9947</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">VisitorsCallTariff</key>
+
+					<value xsi:type="xsd:int">0</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">OperatorsCallTariff</key>
+
+					<value xsi:type="xsd:string">0.0195</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">VisitorCallDuration</key>
+
+					<value xsi:type="xsd:int">7</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">BusyOperators</key>
+
+					<value xsi:type="xsd:string">["918042064626"]</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">OperatorCallDuration</key>
+
+					<value xsi:type="xsd:int">0</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">VisitorCallCost</key>
+
+					<value xsi:type="xsd:int">0</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">OperatorCallCost</key>
+
+					<value xsi:type="xsd:int">0</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">TotalCalCost</key>
+
+					<value xsi:type="xsd:int">0</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">VisitorIPAddress</key>
+
+					<value xsi:type="xsd:string">121.50.4.42</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">VisitorCountry</key>
+
+					<value xsi:type="xsd:string">India</value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">Website</key>
+
+					<value xsi:type="xsd:string"></value>
+
+				</item>
+
+				<item>
+
+					<key xsi:type="xsd:string">CallStatus</key>
+
+					<value xsi:type="xsd:string">CANCEL</value>
+
+				</item>
+
+			</return>
+
+		</ns1:getCallDetailsResponse>
+
+	</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+
+
+
+3. We'll come up with sample codes for file transfer to fetch call
+records asap. I've discussed this internally. My team will work on this
+sample code next week.
+
+4. Getting dashboard within your APP is also
+possible by passing the agent
+login Key. We'll work on this once the rest
+of the works are completed.
+
+
+
+
+On Fri, Jul 11, 2014 at 6:37 PM, Manish Pal
+<Manish.Pal @ wns.com> wrote:
+
+
+
+
+
+
+	Hi Team,
+
+
+
+	As per our discussion today we
+	will implement call report as described
+	below.
+
+
+
+
+	After a call is completed,
+	callback event is triggered, it will contain the
+	Call Id. Using Bounzd
+	SOAP API query call detail by passing Call ID as
+	input parameter.
+
+	Bounzd
+	team will research on how Progenie can download call record files from
+	Bounzd DB.
