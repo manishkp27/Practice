@@ -1,0 +1,29 @@
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	
+	<input type="button" onclick="usingJSMethod()" value="usingJSMethod"/><br><br>
+	<input type="button" onclick="usingEvalMethod()" value="usingEvalMethod"/><br>
+	<input type="button" onclick="usingJQuaryMethod()" value="usingJQuaryMethod"/><br>
+	<div id="demo">display here</div>
+	<div id="demo2">display here</div>
+	<script >
+	
+		var res = '{"one":",manish",",three":true,"message":["manish",123,true],"two":123}';
+		function usingJSMethod()
+		{	var jsonObj = JSON.parse(res);
+			document.getElementById("demo").innerHTML = jsonObj.one;
+			document.getElementById("demo2").innerHTML = jsonObj.message[1];
+		}
+		function usingEvalMethod()
+		{	var jsonObj = eval("("+res+")");
+			document.getElementById("demo").innerHTML = jsonObj.one;
+			document.getElementById("demo2").innerHTML = jsonObj.message[1];
+		}
+		function usingJQuaryMethod()
+		{	var jsonObj = $.parseJSON(res);
+			document.getElementById("demo").innerHTML = jsonObj.one;
+			document.getElementById("demo2").innerHTML = jsonObj.message[1];
+		}
+	</script>
+</body>
